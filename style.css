@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.test{
+    outline: none;
+    border: none;
+    height: 60px;
+    width: 150px;
+    background: limegreen;
+    color: white;
+    /* display: grid;
+    place-items: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.test:hover{
+    cursor: pointer;
+}
+
+.test::before{
+    content: "";
+    position: absolute;
+    background: limegreen;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    animation: pulse 2s ease-out infinite;
+}
+
+@keyframes pulse {
+
+    100%{
+        transform: scale(2.5);
+        opacity: 0;
+    }
+      
+}
